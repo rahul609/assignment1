@@ -1,0 +1,42 @@
+﻿@model Carswebapp.Models.Table_1
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Table_1</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cars)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cars)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Models)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Models)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Carnumber }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

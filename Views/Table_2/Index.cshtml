@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Carswebapp.Models.Table_2>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    body {
+        background-image: url("https://www.mercedes-benz.com/wp-content/uploads/sites/3/2016/08/08-Mercedes-Benz-Design-Vision-Mercedes-Maybach-6-1280x710-1280x710.jpg");
+        color: white;
+        font-family:'Tw Cen MT';
+        font-size: large;
+    }
+</style>
+
+
+<h2>MERCEDES-BENZ</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.carnumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cars)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RentalPrice)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.carnumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cars)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RentalPrice)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NumberPlate }) |
+            @Html.ActionLink("Details", "Details", new { id=item.NumberPlate }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.NumberPlate })
+        </td>
+    </tr>
+}
+
+</table>
